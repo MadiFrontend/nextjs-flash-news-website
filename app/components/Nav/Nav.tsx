@@ -4,7 +4,7 @@ import logoPng from "@/public/logo.png";
 import { NavItem } from "./NavItem";
 import Link from "next/link";
 
-export function Nav({}) {
+export function Nav() {
   return (
     <div>
       {/* logo */}
