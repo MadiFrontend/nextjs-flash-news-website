@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import defaultNewsPng from "@/public/default-news.png";
 import { CATEGORIES_ITEMS } from "../Nav/constant";
+import { ImageWithFallback } from "../ImageWithFallback/ImageWithFallback";
 export function ArticleCard(p: { article: Article }) {
   return (
     <Link
@@ -35,12 +36,13 @@ export function ArticleCard(p: { article: Article }) {
           {p.article.title}
         </div>
         {/* Article image*/}
-        <Image
-          className="h-40"
+        <ImageWithFallback
+          className="h-40 rounded-lg"
           height={200}
           width={300}
           src={p.article.image_url || defaultNewsPng}
           alt="Image for article"
+          fallback={defaultNewsPng}
         />
       </div>
     </Link>
