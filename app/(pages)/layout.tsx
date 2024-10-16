@@ -1,26 +1,16 @@
 import { Nav } from "@/app/components/Nav/Nav";
-import "./globals.css";
-import { Inter } from "next/font/google";
-import { Metadata } from "next";
 
-const inter = Inter({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-  title: "Next.js Flash News",
-  description: "Get the latest flash news",
-};
-
-export default function RootLayout({
+export default function PagesLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} flex p-8`}>
+    <div className="p-8">
+      <div className="flex ">
         <Nav />
-        <div className="px-8 mt-16 w-full">{children}</div>
-      </body>
-    </html>
+        <div className="mt-16 pl-8 w-full">{children}</div>
+      </div>
+    </div>
   );
 }
