@@ -1,4 +1,4 @@
-import { CryptoNews } from "@/app/components/CryptoNews/CryptoNews";
+import { CryptoNews } from "@/app/components/CryptoNews/CryptoNews.server";
 import { LatestNews } from "@/app/components/LatestNews/LatestNews";
 
 export default async function IndexPage() {
