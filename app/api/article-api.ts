@@ -23,7 +23,7 @@ export class ArticleApi {
     const formatedTitle = title.replace("/:/g", "");
     return (
       (await (
-        await fetch(`${process.env.API_BASE_URL}?title=${formatedTitle}`)
+        await fetch(`${process.env.API_BASE_URL}?qInTitle=${formatedTitle}`)
       ).json()) as ArticleListResponse
     ).results[0];
   }
