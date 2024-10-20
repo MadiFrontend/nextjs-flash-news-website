@@ -3,15 +3,15 @@ import { ArticleList } from "@/app/components/ArticleList/ArticleList";
 import Image from "next/image";
 import topPng from "@/public/top.png";
 
-export async function LatestNews(p: {}) {
+export async function LatestNews() {
   const articles = await ArticleApi.fetchToday();
   return (
-    <>
+    <div>
       <div className="flex items-center space-x-4 mb-16">
-        <Image src={topPng} className="h-10 w-10" alt="latest news icon"/>
+        <Image src={topPng} className="h-10 w-10" alt="latest news icon" />
         <h1 className="text-4xl font-bold capitalize">Latest News</h1>
       </div>
       <ArticleList articles={articles} />
-    </>
+    </div>
   );
 }

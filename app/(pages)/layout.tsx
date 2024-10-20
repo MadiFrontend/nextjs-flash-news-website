@@ -1,5 +1,4 @@
 import { Nav } from "@/app/components/Nav/Nav";
-import Clock from "../components/Clock/Clock";
 import dynamic from "next/dynamic";
 
 const ClockNoSSR = dynamic(() => import("@/app/components/Clock/Clock"), {
