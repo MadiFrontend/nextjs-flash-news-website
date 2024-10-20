@@ -1,3 +1,3 @@
-export default function category(p: {}) {
+export default function category() {
   return <div>Category page</div>;
 }

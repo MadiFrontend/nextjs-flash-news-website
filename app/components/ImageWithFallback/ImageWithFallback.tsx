@@ -13,6 +13,7 @@ export function ImageWithFallback({
     <Image
       {...p}
       src={imageSrc}
+      alt="fallback"
       onError={() => {
         setImageSrc(fallback.src);
       }}

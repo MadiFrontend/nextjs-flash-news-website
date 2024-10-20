@@ -13,8 +13,8 @@ export function Nav() {
       </Link>
       {/* Nav Items */}
       <nav className="space-y-4 mt-4">
-        {NAV_ITEMS.map((navItem) => (
-          <NavItem {...navItem} />
+        {NAV_ITEMS.map((navItem, index) => (
+          <NavItem {...navItem} key={index} />
         ))}
       </nav>
     </div>

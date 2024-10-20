@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 
-export default function Clock(p: {}) {
+export default function Clock() {
   const [value, setValue] = useState(new Date().toLocaleTimeString());
   useEffect(() => {
     const intervalId = setInterval(() => {
